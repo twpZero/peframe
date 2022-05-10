@@ -36,7 +36,7 @@ The following prerequisites are required to be installed on your system before y
 .. code-block::
 
     python >= 3.6.6
-    pyton3-pip
+    python3-pip
     libssl-dev
     swig
 
