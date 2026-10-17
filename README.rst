@@ -2,6 +2,18 @@
 peframe
 =======
 
+.. note::
+
+   **This is my fork of** `guelfoweb/peframe <https://github.com/guelfoweb/peframe>`_. **It runs on Python 3.9 and later.**
+
+   On Python 3.9+, peframe 6.0.3 crashed during XOR analysis with ``AttributeError: 'array.array' object has no attribute 'tostring'``. Python 3.9 removed ``array.tostring()``. This fork replaces it with ``tobytes()``, which does the same thing. That's the whole fix. Upstream has been quiet for a while, so rather than wait, I ship it here. Everything else is upstream's work, and full credit goes there.
+
+   Install this fork instead of upstream:
+
+   .. code-block::
+
+      git clone https://github.com/twpZero/peframe.git && cd peframe && sudo python3 setup.py install
+
 peframe is a open source tool to perform static analysis on `Portable Executable <http://en.wikipedia.org/wiki/Portable_Executable>`_ malware and generic suspicious file. It can help malware researchers to detect packer, xor, digital signature, mutex, anti debug, anti virtual machine, suspicious sections and functions, macro and much more information about the suspicious files.
 
 
